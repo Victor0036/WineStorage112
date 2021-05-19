@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "550562664638",
+    "project_id": "winestorage-c9a0b",
+    "storage_bucket": "winestorage-c9a0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550562664638:android:cdb577a42ec34996d38eef",
+        "android_client_info": {
+          "package_name": "com.example.winestorage112"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550562664638-9i1gmvb97c6q2vqdeu08mt5ot0sqmau1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.winestorage112",
+            "certificate_hash": "3edd09af6cab02113e2b7ebea44b971bad8e083d"
+          }
+        },
+        {
+          "client_id": "550562664638-7s8ltkm6qeeempar43jlheup3ghneo14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR8jAT6kOIEVPWvmcZ4AYS3fz7Ja9qduo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550562664638-7s8ltkm6qeeempar43jlheup3ghneo14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
