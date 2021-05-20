@@ -54,7 +54,7 @@ public class SignIn extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         checkUser();
 
-        binding.signInButton.setOnClickListener(new View.OnClickListener() {
+        binding.googleSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = googleSignInClient.getSignInIntent();
@@ -79,9 +79,11 @@ public class SignIn extends AppCompatActivity {
             Task<GoogleSignInAccount> accountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 GoogleSignInAccount account = accountTask.getResult(ApiException.class);
+                Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogleAccount(account);
             }
             catch (Exception e) {
+                Log.w(TAG, "Google sign in failed", e);
 
             }
         }
