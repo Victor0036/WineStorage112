@@ -10,23 +10,35 @@ Marked (X) means it has been implemented:
 Must Have
 
 (X)Manually add wines to cellar {Vintage, producer, country, grape blend, production method, bottle size}
+
 Utilize API to find and add wines to cellar
+
 (X)Remove wines from cellar
+
 (X)Add tasting notes and comments
 
 Should Have
 
 (X)Browse wines in cellar
+
 (X)Login feature
+
 Assign wines as “In cellar” “Consumed” “Faulty” “Sold”
+
 (X)Change previous submissions
+
 Add Dates of consumption
+
 Could Have
 
 Able to see other users’ cellars
+
 Make ratings and notes public for everyone to the for the individual wines
+
 Follow or connect with other app users through the app
+
 Won’t Have
 
 Seeing where the wines can be bought
+
 Buy wines through the app
