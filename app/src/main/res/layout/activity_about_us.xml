@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AboutUs">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="About WineStorage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tortor sit amet nisl suscipit gravida vitae nec arcu. Aenean sed scelerisque arcu, vitae aliquet sapien. Etiam a euismod libero, vel efficitur neque. Suspendisse aliquet arcu et ullamcorper egestas. Fusce viverra elit a orci ultricies porta. Integer ut urna ullamcorper, aliquam eros at, lacinia diam. Nam et justo varius sem semper egestas. Sed tortor leo, ullamcorper ac nunc tristique, fermentum tincidunt massa."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Nunc eget massa id felis vehicula laoreet. Fusce ac nisl massa. In vel metus enim. Sed in tortor accumsan, condimentum nisi eu, finibus justo. Phasellus vel fringilla erat. Sed malesuada sagittis tempus. Mauris aliquam, augue eget blandit faucibus, massa sem cursus dui, vitae tristique nisi quam convallis ante. Duis dictum elementum aliquet. Mauris convallis leo sed elit pretium, a finibus diam porttitor. In sit amet justo quis diam accumsan aliquam ac fringilla lorem."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,7 @@
 package com.example.winestorage112;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,6 +9,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.winestorage112.ui.AboutUs;
+import com.example.winestorage112.ui.MainActivityViewModel;
+import com.example.winestorage112.ui.SignInActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     SimpleDatabase simpleDatabase;
     List<Note> allNotes;
     FloatingActionButton fab;
+    FloatingActionButton aboutUs;
+    private MainActivityViewModel viewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +43,20 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         noItemText = findViewById(R.id.noItemText);
         fab = findViewById(R.id.fab);
+        aboutUs = findViewById(R.id.aboutUs);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SignIn.class));
+                startActivity(new Intent(MainActivity.this, SignInActivity.class));
             }
+        });
+
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            }
+
         });
         simpleDatabase = new SimpleDatabase(this);
         allNotes = simpleDatabase.getAllNotes();
@@ -74,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.add){
             Toast.makeText(this, "Add New Note", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this,AddNote.class);
+            Intent i = new Intent(this, AddNote.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
@@ -92,6 +106,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+    private void checkIfSignedIn() {
+        viewModel.getCurrentUser().observe(this, user -> {
+            if (user != null) {
+                String message = "Welcome " + user.getDisplayName();
+             //   welcomeMessage.setText(message);
+            } else
+                startLoginActivity();
+        });
+    }
+    private void startLoginActivity() {
+        startActivity(new Intent(this, SignInActivity.class));
+        finish();
     }
 
 }
